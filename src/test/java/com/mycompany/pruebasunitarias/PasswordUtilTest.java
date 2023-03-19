@@ -4,6 +4,9 @@
  */
 package com.mycompany.pruebasunitarias;
 
+import static com.mycompany.pruebasunitarias.PasswordUtil.SecurityLevel.MEDIUM;
+import static com.mycompany.pruebasunitarias.PasswordUtil.SecurityLevel.STRONG;
+import static com.mycompany.pruebasunitarias.PasswordUtil.SecurityLevel.WEAK;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,30 +19,29 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author isaac
  */
 public class PasswordUtilTest {
-    
-    public PasswordUtilTest() {
-    }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
-    }
 
     @Test
-    public void testSomeMethod() {
+    public void weak_when_has_less_than_8_letters() {
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(WEAK, PasswordUtil.assessPassword("1234567"));
+    }
+    
+    @Test
+    public void weak_when_has_only_letters() {
+        // TODO review the generated test code and remove the default call to fail.
+        assertEquals(WEAK, PasswordUtil.assessPassword("abcdefgh"));
+    }
+    
+    @Test
+    public void medium_when_has_only_letters_and_numbers() {
+        // TODO review the generated test code and remove the default call to fail.
+        assertEquals(MEDIUM, PasswordUtil.assessPassword("abcd1234"));
+    }
+    
+    @Test
+    public void strong_when_has_letters_numbers_and_symbols() {
+        // TODO review the generated test code and remove the default call to fail.
+        assertEquals(STRONG, PasswordUtil.assessPassword("abcd1234!"));
     }
     
 }
