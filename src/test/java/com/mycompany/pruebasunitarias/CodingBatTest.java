@@ -15,37 +15,31 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author chuye
  */
-public class PruebasUnitariasTest {
-
-    public PruebasUnitariasTest() {
+public class CodingBatTest {
+    
+    public CodingBatTest() {
     }
-
+    
     @BeforeAll
     public static void setUpClass() {
     }
-
+    
     @AfterAll
     public static void tearDownClass() {
     }
-
+    
     @BeforeEach
     public void setUp() {
     }
-
+    
     @AfterEach
     public void tearDown() {
     }
 
-    /**
-     * Test of main method, of class PruebasUnitarias.
-     */
     @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        PruebasUnitarias.main(args);
+    public void testSomeMethod() {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+    
 }
