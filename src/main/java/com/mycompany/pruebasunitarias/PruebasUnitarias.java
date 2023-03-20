@@ -7,8 +7,8 @@ package com.mycompany.pruebasunitarias;
 public class PruebasUnitarias {
 
     public static void main(String[] args) {
-        CodingBat obj = new CodingBat();
-
-        obj.recibirDatos();
+//        CodingBat obj = new CodingBat();
+//
+//        obj.recibirDatos();
     }
 }
