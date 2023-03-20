@@ -7,6 +7,8 @@ package com.mycompany.pruebasunitarias;
 public class PruebasUnitarias {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        CodingBat obj = new CodingBat();
+
+        obj.recibirDatos();
     }
 }
