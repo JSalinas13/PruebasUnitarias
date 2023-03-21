@@ -4,6 +4,7 @@
  */
 package com.mycompany.pruebasunitarias;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -38,6 +39,14 @@ public class PasswordUtilGUI extends javax.swing.JFrame {
         txtContra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtContraActionPerformed(evt);
+            }
+        });
+        txtContra.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtContraKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtContraKeyTyped(evt);
             }
         });
 
@@ -97,6 +106,16 @@ public class PasswordUtilGUI extends javax.swing.JFrame {
         lblNivel.setText(String.valueOf(mensaje));
         //JOptionPane.showInputDialog(null,mensaje,"Nivel de contraseña",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnEvaluaActionPerformed
+
+    private void txtContraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtContraKeyPressed
+
+    private void txtContraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraKeyTyped
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtContraKeyTyped
 
     /**
      * @param args the command line arguments

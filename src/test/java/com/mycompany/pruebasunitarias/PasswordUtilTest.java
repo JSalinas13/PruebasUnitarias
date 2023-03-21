@@ -31,6 +31,11 @@ public class PasswordUtilTest {
         // TODO review the generated test code and remove the default call to fail.
         assertEquals(WEAK, PasswordUtil.assessPassword("abcdefgh"));
     }
+    @Test
+    public void weak_when_has_only_numbers() {
+        // TODO review the generated test code and remove the default call to fail.
+        assertEquals(WEAK, PasswordUtil.assessPassword("12345678"));
+    }
     
     @Test
     public void medium_when_has_only_letters_and_numbers() {
@@ -42,6 +47,12 @@ public class PasswordUtilTest {
     public void strong_when_has_letters_numbers_and_symbols() {
         // TODO review the generated test code and remove the default call to fail.
         assertEquals(STRONG, PasswordUtil.assessPassword("abcd1234!"));
+    }
+    
+    @Test
+    public void weak_when_has_only_symbols() {
+        // TODO review the generated test code and remove the default call to fail.
+        assertEquals(WEAK, PasswordUtil.assessPassword("!#$%&/&%"));
     }
     
 }
