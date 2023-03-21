@@ -4,6 +4,7 @@
  */
 package com.mycompany.pruebasunitarias;
 
+import static com.mycompany.pruebasunitarias.PasswordUtil.SecurityLevel.INVALID;
 import static com.mycompany.pruebasunitarias.PasswordUtil.SecurityLevel.MEDIUM;
 import static com.mycompany.pruebasunitarias.PasswordUtil.SecurityLevel.STRONG;
 import static com.mycompany.pruebasunitarias.PasswordUtil.SecurityLevel.WEAK;
@@ -25,6 +26,11 @@ public class PasswordUtilTest {
         // TODO review the generated test code and remove the default call to fail.
         assertEquals(WEAK, PasswordUtil.assessPassword("1234567"));
     }
+    @Test
+    public void invalid_when_is_empty() {
+        // TODO review the generated test code and remove the default call to fail.
+        assertEquals(INVALID, PasswordUtil.assessPassword(""));
+    }
     
     @Test
     public void weak_when_has_only_letters() {
@@ -43,6 +49,7 @@ public class PasswordUtilTest {
         assertEquals(MEDIUM, PasswordUtil.assessPassword("abcd1234"));
     }
     
+ 
     @Test
     public void strong_when_has_letters_numbers_and_symbols() {
         // TODO review the generated test code and remove the default call to fail.

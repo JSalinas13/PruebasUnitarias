@@ -109,12 +109,19 @@ public class PasswordUtilGUI extends javax.swing.JFrame {
 
     private void txtContraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraKeyPressed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_txtContraKeyPressed
 
     private void txtContraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraKeyTyped
         // TODO add your handling code here:
-        
+        int code = (int) evt.getKeyChar();
+        if (code == 32 ) {
+            evt.consume();
+            getToolkit().beep();
+        } else {
+            
+        }
+        //txtContra.setText(txtContra.getText().trim());
     }//GEN-LAST:event_txtContraKeyTyped
 
     /**
